@@ -30,7 +30,7 @@ var SplashLayer = cc.Layer.extend({
     },
     Controls:function(){
     },
-    Score:function(){
+    Scores:function(){
 
     },
     Credits:function(){

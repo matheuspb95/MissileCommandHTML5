@@ -24,7 +24,8 @@ var Missil = cc.Sprite.extend({
         this.schedule(function(){
             if(move.isDone())
             {
-                this.removeFromParent(true);
+                this.removeFromParentAndCleanup();
+                this.setPositionY(0);
                 /*var cache = cc.SpriteFrameCache.getInstance();
                 cache.addSpriteFrames("explosao.plist", "explosao.png");
 
@@ -41,10 +42,5 @@ var Missil = cc.Sprite.extend({
                 });*/
             }
         })
-    },
-    collideRect:function(){
-        var a = this.getContentSize();
-        var p = this.getPosition();
-        return cc.rect(p.x, p.y,a.width,a.height);
     }
 });
