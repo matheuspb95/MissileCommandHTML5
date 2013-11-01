@@ -17,30 +17,22 @@ var Missil = cc.Sprite.extend({
         var velx = dx*dx;
         var vely = dy*dy;
         var t = Math.sqrt(velx+vely);
-        cc.log("dx="+dx+" dy="+dy+" / velx="+velx+" vely="+vely+" t="+t);
         var move = new cc.MoveTo.create(t/250, new cc.p(x,y));
         var hide = cc.Hide.create();
         this.runAction(move);
         this.schedule(function(){
             if(move.isDone())
             {
-                this.removeFromParentAndCleanup();
-                this.setPositionY(0);
-                /*var cache = cc.SpriteFrameCache.getInstance();
-                cache.addSpriteFrames("explosao.plist", "explosao.png");
-
-                var pre = "explosao";
-                var index = 1;
-                this.this = cc.Sprite.createWithSpriteFrameName(pre + index +".png");
-                this.schedule(function(){
-                     index++;
-                     this.setSpriteFrame(pre + index + ".png");
-                     if(index > 14)
-                     {
-                         this.remove;
-                     }
-                });*/
+                this.kill();
             }
         })
+    },
+    collideRect:function(p){
+        var a = this.getContentSize();
+        return cc.rect(p.x - a.width, p.y - a.height,a.width,a.height);
+    },
+    kill:function(){
+        this.removeFromParent(true);
+        this.setPosition(new cc.p(100000,0));
     }
 });

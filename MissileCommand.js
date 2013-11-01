@@ -10,24 +10,30 @@ var MissileCommand = cc.Scene.extend({
 
 var MissileCommandGame = cc.Layer.extend({
     init:function(){
-
-    	time=6000;
+    	time=600;
     	score=0;
         naves=[];
-        misseis=[]
+        misseis=[];
         numMisseis=0;
         numNaves=0;
-    	window.setInterval(function(){time--;}, 10);
+        numCid=6;
+        verNaves = true;
+        verCanhao = true;
+    	window.setInterval(function(){time--;}, 100);
         this._super();
         this.setTouchEnabled(true);
 
         var fundo = cc.Sprite.create("fundo.png");
         fundo.setPositionX(400);
         fundo.setPositionY(300);
-        this.addChild(fundo);
+        this.addChild(fundo);;
 
-        var cache = cc.SpriteFrameCache.getInstance();
-        cache.addSpriteFrames("cidade.plist", "city.png");
+        ct = [6];
+        for(var i=0;i<6;i++)
+        {
+            ct[i] = new City(i);
+            this.addChild(ct[i]);
+        }
 		  
 		HUDt = cc.LabelTTF.create("0:0"+time, "Arial", 25);
 		HUDt.setPosition(new cc.Point(750, 575));
@@ -36,108 +42,83 @@ var MissileCommandGame = cc.Layer.extend({
 		this.addChild(HUDs);
 		this.addChild(HUDt);
 
-        cidade = [];
-        for(var i=0;i<3;i++)
-        {
-            cidade[i] = cc.Sprite.createWithSpriteFrameName("cidade1.png");
-            cidade[i].setPosition(new cc.Point(55 + i * 108,48));
-            this.addChild(cidade[i]);
-        }
-        for(i=3;i<6;i++)
-        {
-            cidade[i] = cc.Sprite.createWithSpriteFrameName("cidade1.png");
-            cidade[i].setPosition(new cc.Point(200 + i * 108,48));
-            this.addChild(cidade[i]);
-        }
-        cache = cc.SpriteFrameCache.getInstance();
-        cache.addSpriteFrames("canhao.plist", "canhao.png");
-
-        var canhao = cc.Sprite.createWithSpriteFrameName("canhao1.png");
-        canhao.setPosition(new cc.Point(400,44));
+        cn = new canhao();
+        this.addChild(cn);
 
 
-        this.addChild(canhao);
-        this.scheduleUpdate();
-        return this;
-    },
-    update:function(){
-        if(time<1000)
-        {
-            HUDt.setString("0:0"+parseInt(time/100));
-        }else {
-            HUDt.setString("0:"+parseInt(time/100));
-        }
-        for(var j=0;j<cidade.length;j++)
-        {
-            for(i=0;i<naves.length;i++)
+        this.schedule(function(){
+            if(time<100)
             {
-                this.cityDestroy(naves[i],cidade[j]);
-
-                for(var k=0;k<misseis.length;k++)
+                HUDt.setString("0:0"+parseInt(time/10));
+            }else
+            {
+                HUDt.setString("0:"+parseInt(time/10));
+            }
+            if(time % 60 == 0 && verNaves && time > 50)
+            {
+                naves.push(new Nave());
+                this.addChild(naves[numNaves]);
+                numNaves++;
+                naves.push(new Nave());
+                this.addChild(naves[numNaves]);
+                numNaves++;
+                naves.push(new Nave());
+                this.addChild(naves[numNaves]);
+                numNaves++;
+                verNaves = false;
+                window.setTimeout(function(){verNaves = true}, 500);
+            }
+            if(time<0 || numCid == 0)
+            {
+                cc.Director.getInstance().replaceScene(cc.TransitionFade.create(0.2,new Splash));
+            }
+            for(var a=0;a<naves.length;a++)
+            {
+                /*if(this.collide(naves[a],cn))
                 {
-                    this.collideCheck(naves[i],misseis[k]);
+                    naves[a].kill();
+                    cn.kill();
+                }*/
+                for(var b=0;b<ct.length;b++)
+                {
+                    if(this.collide(naves[a], ct[b]))
+                    {
+                        naves[a].kill();
+                        ct[b].kill();
+                        numCid--;
+                    }
+                }
+                for(var c=0;c<misseis.length;c++)
+                {
+                    if(this.collide(naves[a], misseis[c]))
+                    {
+                        naves[a].kill();
+                        misseis[c].kill();
+                        score++;
+                        HUDs.setString("Score: "+score);
+                    }
                 }
             }
-        }
-        if(time % 300 === 0)
-        {
-            naves[numNaves] = new Nave();
-            this.addChild(naves[numNaves]);
-            numNaves++;
-            naves[numNaves] = new Nave();
-            this.addChild(naves[numNaves]);
-            numNaves++;
-            naves[numNaves] = new Nave();
-            this.addChild(naves[numNaves]);
-            numNaves++;
-        }
-        HUDs.setString("Score: "+score);
-        if(time<0)
-        {
-            cc.Director.getInstance().replaceScene(cc.TransitionFade.create(0.2,new Splash));
-        }
+        });
+        return this;
     },
     onTouchesEnded:function (pTouch,pEvent){
-        misseis[numMisseis] = new Missil();
-        this.addChild(misseis[numMisseis]);
-        misseis[numMisseis].handleTouch(pTouch[0].getLocation());
-        numMisseis++;
-    },
-    collideCheck:function(nave, missil){
-        var a = nave.getContentSize();
-        var p = nave.getPosition();
-        var rect1 =  cc.rect(p.x - a.width, p.y - a.height, a.width, a.height);
-        var b = missil.getContentSize();
-        var q = missil.getPosition();
-        var rect2 = cc.rect(q.x - b.width, q.y - b.height, q.width, b.height);
-        if(cc.rectOverlapsRect(rect1,rect2))
+        if(verCanhao)
         {
-            score++;
-            nave.removeFromParent(true);
-            nave.setPosition(new cc.Point(-2000,0));
-            missil.removeFromParent(true);
-            missil.setPosition(new cc.Point(-1000,0));
+            misseis.push(new Missil());
+            this.addChild(misseis[numMisseis]);
+            misseis[numMisseis].handleTouch(pTouch[0].getLocation());
+            numMisseis++;
+            verCanhao = false;
+            window.setTimeout(function(){verCanhao = true}, 500);
         }
     },
-    cityDestroy:function(nave,cidade)
-    {
-        var a = nave.getContentSize();
-        var p = nave.getPosition();
-        var rect1 =  cc.rect(p.x - a.width, p.y - a.height, a.width, a.height);
-        var b = cidade.getContentSize();
-        var q = cidade.getPosition();
-        var rect2 = cc.rect(q.x - b.width, q.y - b.height, q.width, b.height);
-        if(cc.rectOverlapsRect(rect1,rect2))
-        {
-            var pos = new cc.Point(q.x, q.y);
-            cidade.removeFromParent(true);
-            cidade = cc.Sprite.createWithSpriteFrameName("cidade2.png");
-            cidade.setPosition(pos);
-            this.addChild(cidade);
-            nave.removeFromParent();
-            nave.setPosition(new cc.Point(-2000,0));
-            cc.log("Cidade destruida!");
-        }
+    collide:function (a, b) {
+        var pos1 = a.getPosition();
+        var pos2 = b.getPosition();
 
+        var aRect = a.collideRect(pos1);
+        var bRect = b.collideRect(pos2);
+        return cc.rectIntersectsRect(aRect, bRect);
     }
 });

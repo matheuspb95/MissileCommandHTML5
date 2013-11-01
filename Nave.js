@@ -25,8 +25,16 @@ var Nave = cc.Sprite.extend({
             this.setPosition(new cc.Point(this.getPosition().x-velx,this.getPosition().y-vely))
             if(this.getPositionY() < 30)
             {
-                this.removeFromParentAndCleanup();
+                this.kill();
             }
         })
+    },
+    collideRect:function(p){
+        var a = this.getContentSize();
+        return cc.rect(p.x - a.width, p.y - a.height,a.width,a.height);
+    },
+    kill:function(){
+        this.removeFromParent(true);
+        this.setPosition(new cc.p(-10000,0));
     }
 })
