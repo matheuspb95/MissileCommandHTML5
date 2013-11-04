@@ -12,7 +12,7 @@
         frameRate:60, // 60 frames per second
         tag:"GC", // id of the canvas element
         engineDir:"../MissileCommandHTML5-master/cocos2d/", // path to your cocos2d installation
-        appFiles:["MissileCommand.js", "Missil.js", "Splash.js", "Nave.js","City.js","canhao.js"] // path to the main game file
+        appFiles:["MissileCommand.js", "Missil.js", "Splash.js", "Nave.js","City.js","canhao.js","controls.js"] // path to the main game file
     };
     window.addEventListener('DOMContentLoaded', function () {
         var s = d.createElement("script");

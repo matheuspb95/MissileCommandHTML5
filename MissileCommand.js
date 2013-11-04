@@ -26,7 +26,7 @@ var MissileCommandGame = cc.Layer.extend({
         var fundo = cc.Sprite.create("fundo.png");
         fundo.setPositionX(400);
         fundo.setPositionY(300);
-        this.addChild(fundo);;
+        this.addChild(fundo);
 
         ct = [6];
         for(var i=0;i<6;i++)
@@ -47,6 +47,7 @@ var MissileCommandGame = cc.Layer.extend({
 
 
         this.schedule(function(){
+
             if(time<100)
             {
                 HUDt.setString("0:0"+parseInt(time/10));
@@ -54,7 +55,7 @@ var MissileCommandGame = cc.Layer.extend({
             {
                 HUDt.setString("0:"+parseInt(time/10));
             }
-            if(time % 60 == 0 && verNaves && time > 50)
+            if(time % 60 == 0 && verNaves && time > 60)
             {
                 naves.push(new Nave());
                 this.addChild(naves[numNaves]);

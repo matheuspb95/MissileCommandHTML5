@@ -6,13 +6,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de0cb847-8a29-4c4f-8d8d-e781e3e44694" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/City.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/canhao.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/naves_7x10.png" afterPath="$PROJECT_DIR$/naves_7x10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controls.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/city.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Missil.js" afterPath="$PROJECT_DIR$/Missil.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MissileCommand.js" afterPath="$PROJECT_DIR$/MissileCommand.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Nave.js" afterPath="$PROJECT_DIR$/Nave.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Splash.js" afterPath="$PROJECT_DIR$/Splash.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cocos2d.js" afterPath="$PROJECT_DIR$/cocos2d.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MissileCommandHTML5.iws" />
@@ -36,19 +38,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MissileCommand.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MissileCommand.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MissileCommand.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="54" selection-start="1461" selection-end="1461" vertical-scroll-proportion="1.1229947" vertical-offset="0" max-vertical-offset="1935">
+            <state line="57" column="53" selection-start="1460" selection-end="1460" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1950">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="canhao.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/canhao.js">
+      <file leaf-file-name="controls.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controls.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="54" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+            <state line="15" column="0" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -56,28 +58,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cocos2d.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cocos2d.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="95" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Splash.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Splash.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.0" vertical-offset="62" max-vertical-offset="810">
+            <state line="21" column="44" selection-start="917" selection-end="1029" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Missil.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Missil.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Missil.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="28" selection-start="789" selection-end="789" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+            <state line="8" column="8" selection-start="256" selection-end="256" vertical-scroll-proportion="0.16042781" vertical-offset="0" max-vertical-offset="1200">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cocos2d.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cocos2d.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="97" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
               <folding />
             </state>
           </provider>
@@ -86,7 +88,7 @@
       <file leaf-file-name="Nave.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Nave.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="69" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+            <state line="39" column="8" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
@@ -95,7 +97,7 @@
       <file leaf-file-name="City.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/City.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="48" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+            <state line="16" column="24" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="705">
               <folding />
             </state>
           </provider>
@@ -121,15 +123,18 @@
       <list>
         <option value="$PROJECT_DIR$/index.html" />
         <option value="/media/aluno/MATHEUS/HTML5/circlechain/circlechain.js" />
-        <option value="$PROJECT_DIR$/main.js" />
-        <option value="$PROJECT_DIR$/Splash.js" />
         <option value="$PROJECT_DIR$/city.js" />
-        <option value="$PROJECT_DIR$/Nave.js" />
         <option value="$PROJECT_DIR$/City.js" />
-        <option value="$PROJECT_DIR$/Missil.js" />
-        <option value="$PROJECT_DIR$/cocos2d.js" />
         <option value="$PROJECT_DIR$/canhao.js" />
+        <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/test.js" />
+        <option value="$PROJECT_DIR$/explosao.js" />
         <option value="$PROJECT_DIR$/MissileCommand.js" />
+        <option value="$PROJECT_DIR$/Splash.js" />
+        <option value="$PROJECT_DIR$/controls.js" />
+        <option value="$PROJECT_DIR$/cocos2d.js" />
+        <option value="$PROJECT_DIR$/Nave.js" />
+        <option value="$PROJECT_DIR$/Missil.js" />
       </list>
     </option>
   </component>
@@ -165,6 +170,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -185,7 +191,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -271,30 +276,11 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MissileCommand.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="18" selection-start="2160" selection-end="2160" vertical-scroll-proportion="0.0" vertical-offset="956" max-vertical-offset="2220">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cocos2d.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="66" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Splash.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="810">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Missil.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="37" selection-start="798" selection-end="798" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="750">
@@ -314,13 +300,6 @@
         <state line="9" column="7" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="39" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///media/aluno/MATHEUS/Projetos/Missile comando/src/Predio.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748" />
@@ -331,53 +310,79 @@
         <state line="17" column="26" selection-start="580" selection-end="586" vertical-scroll-proportion="-0.08163265" vertical-offset="315" max-vertical-offset="2280" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="37" selection-start="883" selection-end="883" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/canhao.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="54" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cocos2d.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="95" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Splash.js">
+    <entry file="file://$PROJECT_DIR$/explosao.plist">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.0" vertical-offset="62" max-vertical-offset="810">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Missil.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="28" selection-start="789" selection-end="789" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Nave.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="69" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.7446524" vertical-offset="1305" max-vertical-offset="3150">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/City.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="48" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+        <state line="16" column="24" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Splash.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="44" selection-start="917" selection-end="1029" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MissileCommand.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="54" selection-start="1461" selection-end="1461" vertical-scroll-proportion="1.1229947" vertical-offset="0" max-vertical-offset="1935">
+        <state line="57" column="53" selection-start="1460" selection-end="1460" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1950">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cocos2d.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="97" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Nave.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="8" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Missil.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="8" selection-start="256" selection-end="256" vertical-scroll-proportion="0.16042781" vertical-offset="0" max-vertical-offset="1200">
           <folding />
         </state>
       </provider>

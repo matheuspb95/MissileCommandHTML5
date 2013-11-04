@@ -36,5 +36,7 @@ var Nave = cc.Sprite.extend({
     kill:function(){
         this.removeFromParent(true);
         this.setPosition(new cc.p(-10000,0));
+        cc.AudioEngine.getInstance().setEffectsVolume(0.1);
+        cc.AudioEngine.getInstance().playEffect("bomb",false);
     }
 })

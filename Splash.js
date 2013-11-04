@@ -29,6 +29,7 @@ var SplashLayer = cc.Layer.extend({
         cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1.2,new MissileCommand));
     },
     Controls:function(){
+        cc.Director.getInstance().replaceScene(cc.TransitionFade.create(0.1,new controls));
     },
     Scores:function(){
 

@@ -15,10 +15,13 @@ var cocos2dApp = cc.Application.extend({
         cc.Loader.getInstance().onload = function () {
             cc.AppController.shareAppController().didFinishLaunchingWithOptions();
         };
+        cc.AudioEngine.getInstance().init();
         cc.Loader.getInstance().preload([
             {type:"plist",src:"cidade.plist"},
             {type:"plist",src:"explosao.plist"},
-            {type:"plist",src:"canhao.plist"}
+            {type:"plist",src:"canhao.plist"},
+            {type:"sound",src:"bomb"},
+            {type:"sound",src:"missle"}
         ]);
     },
     applicationDidFinishLaunching:function () {
