@@ -4,17 +4,19 @@
 var canhao = cc.Sprite.extend({
     alive:true,
     ctor:function(pos){
+        this._super();
         sprite = cc.SpriteFrameCache.getInstance();
         sprite.addSpriteFrames("canhao.plist", "canhao.png");
 
         var frame = []
-        frame.push(sprite.getSpriteFrame("canhao1.png"));
-        frame.push(sprite.getSpriteFrame("canhao2.png"));
+        frame.push(cc.SpriteFrameCache.getInstance().getSpriteFrame("canhao1.png"));
+        frame.push(cc.SpriteFrameCache.getInstance().getSpriteFrame("canhao2.png"));
         //frame = frame*4;
 
         fail = cc.Animate.create(cc.Animation.create(frame, 0.3));
 
-        this.initWithSpriteFrame(cc.SpriteFrameCache.getInstance().getSpriteFrame("canhao1.png"));
+        var f1 = cc.SpriteFrameCache.getInstance().getSpriteFrame("canhao1.png")
+        this.initWithSpriteFrame(f1);
         this.setPosition(400,44);
     },
     kill:function(){

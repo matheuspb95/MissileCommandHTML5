@@ -3,6 +3,7 @@
  */
 var Nave = cc.Sprite.extend({
     ctor:function(){
+        this._super();
         this.initWithFile("naves_7x10.png");
         var posx = Math.random()*800;
         var angle;

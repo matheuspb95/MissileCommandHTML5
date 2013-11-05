@@ -9,20 +9,12 @@ var cocos2dApp = cc.Application.extend({
         cc.COCOS2D_DEBUG = this.config["COCOS2D_DEBUG"];
         cc.initDebugSetting();
         cc.setup(this.config["tag"]);
-        cc.Loader.getInstance().onloading = function () {
-            //cc.LoaderScene.draw();
-        };
-        cc.Loader.getInstance().onload = function () {
-            cc.AppController.shareAppController().didFinishLaunchingWithOptions();
-        };
+        cc.AppController.shareAppController().didFinishLaunchingWithOptions();
         cc.AudioEngine.getInstance().init();
-        cc.Loader.getInstance().preload([
-            {type:"plist",src:"cidade.plist"},
-            {type:"plist",src:"explosao.plist"},
-            {type:"plist",src:"canhao.plist"},
-            {type:"sound",src:"bomb"},
-            {type:"sound",src:"missle"}
-        ]);
+        cc.Loader.preload([],function () {
+            cc.Director.getInstance().replaceScene(new this.startScene());
+        }, this);
+
     },
     applicationDidFinishLaunching:function () {
         var director = cc.Director.getInstance();

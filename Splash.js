@@ -26,7 +26,19 @@ var SplashLayer = cc.Layer.extend({
         return this;
     },
     Start:function(){
-        cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1.2,new MissileCommand));
+        cc.Loader.preload([
+            {src:"cidade.plist"},{src:"city.png"},
+            {src:"explosao.plist"},{src:"explosao.png"},
+            {src:"canhao.plist"},{src:"canhao.png"},
+            {src:"bomb.mp3"},{src:"naves_7x10.png"},
+            {src:"missle.mp3"},{src:"missil_5x9.png"}
+
+
+        ],function () {
+            var scene = cc.Scene.create();
+            scene.addChild(MissileCommandGame.create());
+            cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1.2, scene));
+        },this);
     },
     Controls:function(){
         cc.Director.getInstance().replaceScene(cc.TransitionFade.create(0.1,new controls));

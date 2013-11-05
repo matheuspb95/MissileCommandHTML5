@@ -3,6 +3,7 @@
  */
 var Missil = cc.Sprite.extend({
     ctor:function(){
+        this._super();
         this.initWithFile("missil_5x9.png");
         this.setPosition(new cc.Point(400, 75));
         cc.AudioEngine.getInstance().setEffectsVolume(0.1);

@@ -4,20 +4,21 @@
 var City = cc.Sprite.extend({
     alive:true,
     ctor:function(pos){
+        this._super();
         cache = cc.SpriteFrameCache.getInstance();
         cache.addSpriteFrames("cidade.plist", "city.png");
 
         var frame = []
-        frame.push(cache.getSpriteFrame("cidade2.png"));
-        frame.push(cache.getSpriteFrame("cidade3.png"));
+        frame.push(cc.SpriteFrameCache.getInstance().getSpriteFrame("cidade2.png"));
+        frame.push(cc.SpriteFrameCache.getInstance().getSpriteFrame("cidade3.png"));
 
 
 
         var explode = cc.Animation.create(frame, 0.3);
         action = cc.Animate.create(explode);
 
-
-        this.initWithSpriteFrame(cc.SpriteFrameCache.getInstance().getSpriteFrame("cidade1.png"));
+        var frame1 = cc.SpriteFrameCache.getInstance().getSpriteFrame("cidade1.png")
+        this.initWithSpriteFrame(frame1);
 
         if(pos < 3)
             this.setPosition(55 + 108*pos,48);

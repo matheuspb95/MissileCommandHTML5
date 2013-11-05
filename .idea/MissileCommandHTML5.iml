@@ -5,7 +5,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="cocos2d" level="application" />
-    <orderEntry type="library" name="cocos2d" level="project" />
+    <orderEntry type="library" name="cocos2d" level="application" />
   </component>
 </module>
 

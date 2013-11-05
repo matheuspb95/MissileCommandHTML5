@@ -1,13 +1,4 @@
 /** Created by aluno on 21/10/13.*/
-var MissileCommand = cc.Scene.extend({
-    onEnter:function(){
-        this._super();
-        var layer = new MissileCommandGame();
-        layer.init();
-        this.addChild(layer);
-    }
-});
-
 var MissileCommandGame = cc.Layer.extend({
     init:function(){
     	time=600;
@@ -123,3 +114,18 @@ var MissileCommandGame = cc.Layer.extend({
         return cc.rectIntersectsRect(aRect, bRect);
     }
 });
+
+MissileCommandGame.create = function () {
+    var sg = new MissileCommandGame();
+    if (sg && sg.init()) {
+        return sg;
+    }
+    return null;
+};
+
+MissileCommandGame.scene = function () {
+    var scene = cc.Scene.create();
+    var layer = MissileCommandGame.create();
+    scene.addChild(layer, 1);
+    return scene;
+};
